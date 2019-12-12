@@ -14,3 +14,10 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Auth::routes();
+
+Route::get('/p', 'PostsController@create');
+
+Route::get('/profile/{user}', 'ProfilesController@index')->name('profile.show');
+
